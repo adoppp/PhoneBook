@@ -1,0 +1,31 @@
+.label {
+    display: flex;
+    max-width: 480px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.input {
+    margin-top: 4px;
+    padding: 4px 0 4px 16px;
+    max-width: 480px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid var(--border-default, #8C9196);
+    background-color: transparent;
+    transition-property: border-radius, background-color, padding;
+    transition-duration: 250ms; 
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input:focus {
+    padding: 4px 0 4px 8px;
+    border-radius: 5px;
+    border: 1.5px solid var(--blueee, #232020);
+    background: rgba(100, 204, 197, 0.50);
+}
+
+.input::placeholder {
+    font-size: 16px;
+}
