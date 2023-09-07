@@ -10,7 +10,7 @@ export const SharedLayout = () => {
                 <Link to='/' >Home</Link>
                 <Link to='/contacts' >Contacts</Link>
                 <Link to='/login' >Log in</Link>
-                <Link to='/signup' >Sigh up</Link>
+                <Link to='/signup' >Sign up</Link>
             </nav>
 
             <Suspense fallback={<Loader/>}>
