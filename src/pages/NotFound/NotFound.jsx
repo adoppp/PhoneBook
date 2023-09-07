@@ -1,6 +1,11 @@
+import { Link } from "react-router-dom";
+
 const NotFound = () => {
     return (
-        <h1>Register now for using this app!</h1>
+        <div>
+            <h1>Error 404. Sorry, page wan't found.</h1>
+            <Link to="/" >Back to the home page.</Link>
+        </div>
     )
 }
 

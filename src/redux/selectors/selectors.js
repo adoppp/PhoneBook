@@ -7,3 +7,7 @@ export const errorSelector = state => state.contacts.error;
 export const filterSelector = state => state.filter.filter;
 
 export const errorUserSelector = state => state.user.error;
+
+export const authenticatedSelector = state => state.user.authenticated;
+
+export const userEmailSelector = state => state.user.userData.email;

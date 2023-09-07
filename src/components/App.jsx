@@ -1,6 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 import { SharedLayout } from "./SharedLayout/SharedLayout";
-import { lazy } from "react";
+import { lazy, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { refreshUserThunk } from "redux/operations/authThunk";
 
 const Home = lazy(() => import('pages/home/Home'));
 const Contacts = lazy(() => import('pages/contacts/Contacts'));
@@ -9,7 +11,10 @@ const Login = lazy(() => import('pages/login/Login'))
 const NotFound = lazy(() => import('pages/NotFound/NotFound'))
 
 export const App = () => {
-  
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(refreshUserThunk());
+  }, [dispatch])
   return (
     <Routes>
       <Route path="/" element={<SharedLayout />}>
