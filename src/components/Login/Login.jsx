@@ -1,6 +1,8 @@
 import { useDispatch } from "react-redux";
 import Notiflix from "notiflix";
 import { loginThunk } from "redux/operations/authThunk";
+import css from './Login.module.css';
+import { Link } from "./Login.styled";
 
 export const LoginForm = () => {
     const dispatch = useDispatch();
@@ -29,18 +31,19 @@ export const LoginForm = () => {
     }
 
     return (
-        <div>
-            <form onSubmit={handleSumbit}>
-                <label>
-                    Email:
-                    <input type="email" name="userEmail"/>
-                </label>
-                <label>
-                    Password:
-                    <input type="password" name="userPassword"/>
-                </label>
-                <button type="submit">Log in</button>
+        <div className={css.container}>
+            <div>
+            <form onSubmit={handleSumbit} className={css.form}>
+                    <h1 className={css.title}>Log in</h1>
+                    <input type="email" name="userEmail" className={css.input} placeholder="Email*"/>
+                    <input type="password" name="userPassword" className={css.input} placeholder="Password"/>
+                <button type="submit" className={css.button}>Log in</button>
             </form>
+            </div>
+            <div>
+                <h2 className={css.new}>new <span className={css.span}>users</span></h2>
+                <Link to='/signup'>Register now</Link>
+            </div>
         </div>
     )
 }

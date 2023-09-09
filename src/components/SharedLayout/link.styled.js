@@ -2,14 +2,17 @@ import styled from 'styled-components';
 import { NavLink } from "react-router-dom";
 
 export const Link = styled(NavLink)`
-  padding: 8px 16px;
-  border-radius: 4px;
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 5px;
+  background: #3A3535;
+
+  color: #F1F6F9;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: capitalize;
 
   &.active {
-    color: white;
-    background-color: orangered;
+    background: #FF9EAA;
   }
 `;

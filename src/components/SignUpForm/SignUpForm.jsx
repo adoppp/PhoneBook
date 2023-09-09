@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { regisrtrationThunk } from "redux/operations/authThunk";
 import { errorUserSelector } from "redux/selectors/selectors";
 import { Error } from "components/Error/Error";
+import css from './SignUpForm.module.css';
 
 export const SignUpForm = () => {
     const error = useSelector(errorUserSelector);
@@ -37,21 +38,13 @@ export const SignUpForm = () => {
     };
 
     return(
-        <div>
-            <form onSubmit={handleSubmit}>
-                <label>
-                    Name:
-                    <input type="text" name="userName"/>
-                </label>
-                <label>
-                    Email:
-                    <input type="email" name="userEmail"/>
-                </label>
-                <label>
-                    Password:
-                    <input type="password" name="userPassword"/>
-                </label>
-                <button type="submit">Sign up</button>
+        <div className={css.container}>
+            <form onSubmit={handleSubmit} className={css.form}>
+                <h1 className={css.title}>Registration</h1>
+                <input type="text" name="userName" className={css.input} placeholder="Name"/>
+                <input type="email" name="userEmail" className={css.input} placeholder="Email*"/>
+                <input type="password" name="userPassword" className={css.input} placeholder="Password"/>
+                <button type="submit" className={css.button}>Sign up</button>
             </form>
             {error && ( <Error errorText={error} /> )}
         </div>

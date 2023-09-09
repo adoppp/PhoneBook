@@ -7,6 +7,9 @@
     justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 
 .item:last-child {
@@ -35,4 +38,12 @@
 
 .button:active {
     background-color: #ffbec6;
+}
+
+.container {
+    margin-right: 12px;
+}
+
+.span {
+    margin-right: 8px;
 }

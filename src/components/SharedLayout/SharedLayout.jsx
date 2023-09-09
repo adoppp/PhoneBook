@@ -5,27 +5,34 @@ import { Outlet } from "react-router-dom"
 import { useSelector } from "react-redux"
 import { authenticatedSelector } from "redux/selectors/selectors"
 import { UserMenu } from "components/UserMenu/UserMenu"
+import css from './SharedLayot.module.css'
 
 export const SharedLayout = () => {
     const authenticated = useSelector(authenticatedSelector);
     
     return (
         <div>
-            <nav>
+            <header className={css.header}>
+            <nav className={css.nav}>
                 <Link to='/' >Home</Link>
                 {authenticated ? 
-                <div>
-                <Link to='/contacts' >Contacts</Link>
+                <div className={css.containerTwo}>
+                <Link to='/contacts' className={css.contacts} >Contacts</Link>
                 <UserMenu />
                 </div>
                  : 
                 <div> 
-                <Link to='/login' >Log in</Link>
+                <Link to='/login' className={css.link}>Log in</Link>
                 <Link to='/signup' >Sign up</Link>
                 </div>}
             </nav>
+            </header>
 
-            <Suspense fallback={<Loader/>}>
+            <Suspense fallback={
+              <div className={css.container}>
+                <Loader/>
+              </div>
+            }>
                 <Outlet />
             </Suspense>
         </div>

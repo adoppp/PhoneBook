@@ -27,8 +27,6 @@ export const ContactForm = ({onAddContact}) => {
 
     return (
       <form onSubmit={handleSubmit} className={css.form}>
-        <label className={css.label}>
-          Name
           <input
             type="text"
             name="name"
@@ -40,9 +38,6 @@ export const ContactForm = ({onAddContact}) => {
             className={css.input}
             placeholder='Name'
           />
-        </label>
-        <label className={css.label}>
-          Number
           <input
             type="tel"
             name="number"
@@ -54,7 +49,6 @@ export const ContactForm = ({onAddContact}) => {
             className={css.input}
             placeholder='Number'
           />
-        </label>
         <button type="submit" className={css.button}>Add contact</button>
       </form>
   );

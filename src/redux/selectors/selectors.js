@@ -11,3 +11,5 @@ export const errorUserSelector = state => state.user.error;
 export const authenticatedSelector = state => state.user.authenticated;
 
 export const userEmailSelector = state => state.user.userData.email;
+ 
+export const userDataSelector = state => state.user.userData;
