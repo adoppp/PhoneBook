@@ -12,7 +12,15 @@ export const Link = styled(NavLink)`
   font-weight: 400;
   text-transform: capitalize;
 
+  &:hover {
+    background: #e1848f;
+  }
+
   &.active {
-    background: #FF9EAA;
+    background: #e1848f;
+
+    &:hover {
+      background: #ffbec6;
+    }
   }
 `;
