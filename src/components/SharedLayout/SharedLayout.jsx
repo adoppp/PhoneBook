@@ -21,7 +21,7 @@ export const SharedLayout = () => {
                 <UserMenu />
                 </div>
                  : 
-                <div> 
+                <div className={css.containerThree}> 
                 <Linkk to='/signup' className={css.link}>Sign up</Linkk>
                 <Linkk to='/login' >Log in</Linkk>
                 </div>}

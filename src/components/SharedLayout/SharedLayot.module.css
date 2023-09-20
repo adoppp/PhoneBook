@@ -48,4 +48,13 @@
     .nav {
         align-items: flex-start;
     }
+
+    .containerThree {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .link {
+        margin: 0 0 12px 0;
+    }
 }

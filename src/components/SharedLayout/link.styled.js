@@ -9,7 +9,7 @@ export const Linkk = styled(NavLink)`
   font-size: 24px;
   font-weight: 500;
   line-height: normal;
-  padding: 12px 40px;
+  padding: 12px 20px;
 
   transition-property: background-color;
   transition-duration: 250ms; 
@@ -26,6 +26,11 @@ export const Linkk = styled(NavLink)`
       background: #395C38;
     }
   }
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    text-align: center;
+  }
 `;
 
 export const LinkP = styled(NavLink)`
@@ -41,5 +46,9 @@ export const LinkP = styled(NavLink)`
 
   &:hover {
     color: #DBDBDB;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 24px;
   }
 `;
