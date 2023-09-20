@@ -1,5 +1,5 @@
 import { Suspense } from "react"
-import { Link } from "./link.styled"
+import { Linkk, LinkP} from "./link.styled"
 import { Loader } from "components/Loader/Loader"
 import { Outlet } from "react-router-dom"
 import { useSelector } from "react-redux"
@@ -14,16 +14,16 @@ export const SharedLayout = () => {
         <div>
             <header className={css.header}>
             <nav className={css.nav}>
-                <Link to='/' >Home</Link>
+                <LinkP to='/' >PhoneBook</LinkP>
                 {authenticated ? 
                 <div className={css.containerTwo}>
-                <Link to='/contacts' className={css.contacts} >Contacts</Link>
+                <Linkk to='/contacts' className={css.contacts} >Contacts</Linkk>
                 <UserMenu />
                 </div>
                  : 
                 <div> 
-                <Link to='/login' className={css.link}>Log in</Link>
-                <Link to='/signup' >Sign up</Link>
+                <Linkk to='/signup' className={css.link}>Sign up</Linkk>
+                <Linkk to='/login' >Log in</Linkk>
                 </div>}
             </nav>
             </header>

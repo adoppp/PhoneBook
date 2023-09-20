@@ -1,26 +1,45 @@
 import styled from 'styled-components';
 import { NavLink } from "react-router-dom";
 
-export const Link = styled(NavLink)`
-  padding: 4px 12px;
-  border-radius: 5px;
-  background: #3A3535;
-
-  color: #F1F6F9;
+export const Linkk = styled(NavLink)`
+  border-radius: 0px 100px;
+  background: #618264;
+  color: #FFF;
   font-family: Roboto;
-  font-size: 16px;
-  font-weight: 400;
-  text-transform: capitalize;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: normal;
+  padding: 12px 40px;
+
+  transition-property: background-color;
+  transition-duration: 250ms; 
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
-    background: #e1848f;
+    background: #395C38;
   }
 
   &.active {
-    background: #e1848f;
+    background: #79AC78;
 
     &:hover {
-      background: #ffbec6;
+      background: #395C38;
     }
+  }
+`;
+
+export const LinkP = styled(NavLink)`
+  color: #F4F4F4;
+  font-family: Roboto;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: normal;
+
+  transition-property: color;
+  transition-duration: 250ms; 
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    color: #DBDBDB;
   }
 `;

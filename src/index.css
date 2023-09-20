@@ -1,4 +1,6 @@
 @import-normalize; /* bring in normalize.css styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
 
 body {
   margin: 0;
@@ -28,7 +30,9 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  background-color: #F4F4F4;
+  background-image: url('./img/Background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 ul,

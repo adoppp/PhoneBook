@@ -40,7 +40,7 @@ export const SignUpForm = () => {
     return(
         <div className={css.container}>
             <form onSubmit={handleSubmit} className={css.form}>
-                <h1 className={css.title}>Registration</h1>
+                <h1 className={css.title}>Registration form</h1>
                 <input type="text" name="userName" className={css.input} placeholder="Name"/>
                 <input type="email" name="userEmail" className={css.input} placeholder="Email*"/>
                 <input type="password" name="userPassword" className={css.input} placeholder="Password"/>

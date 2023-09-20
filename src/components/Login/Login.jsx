@@ -40,8 +40,8 @@ export const LoginForm = () => {
                 <button type="submit" className={css.button}>Log in</button>
             </form>
             </div>
-            <div>
-                <h2 className={css.new}>new <span className={css.span}>users</span></h2>
+            <div className={css.newUser}>
+                <h2 className={css.new}>Don&acute;t have account yet?</h2>
                 <Link to='/signup'>Register now</Link>
             </div>
         </div>
