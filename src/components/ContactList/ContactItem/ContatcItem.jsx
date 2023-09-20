@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import css from './ContactItem.module.css';
-import { ReactSVG } from 'react-svg'
 
 export const ContactItem = ({ contact, onDeleteContact }) => {
   return (
