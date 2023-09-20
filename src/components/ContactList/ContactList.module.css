@@ -2,6 +2,6 @@
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    max-width: 360px;
-    width: 100%;
+    overflow-y: scroll;
+    max-height: 400px;
 }

@@ -27,6 +27,7 @@ export const ContactForm = ({onAddContact}) => {
 
     return (
       <form onSubmit={handleSubmit} className={css.form}>
+          <h1 className={css.title}>Add Contact</h1>
           <input
             type="text"
             name="name"

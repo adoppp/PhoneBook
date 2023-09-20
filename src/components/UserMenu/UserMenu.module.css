@@ -1,11 +1,19 @@
 .container {
     display: flex;
+    position: relative;
+    margin-left: 28px;
+    align-items: center;
 }
 
 .p {
-    color: #F1F6F9;
-    margin-right: 4px;
-    padding-top: 3px;
+    cursor: default;
+    margin-right: 32px;
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: 0.48px;
 }
 
 .pTwo {
@@ -14,19 +22,17 @@
 
 .button {
     border: 0px;
-    margin: 0 auto;
-    background: #3A3535;
-    color: #F1F6F9;
+    max-width: fit-content;
+    padding: 12px 48px;
+    color: #f4f4f4;
     cursor: pointer;
+    border-radius: 0px 100px;
+    background: #618264;
 
-    padding: 4px 12px;
-    border-radius: 5px;
-  
     font-family: Roboto;
-    font-size: 16px;
-    font-weight: 400;
-    text-transform: capitalize;
-
+    font-size: 24px;
+    font-weight: 500;
+    line-height: normal;
 
     transition-property: background-color;
     transition-duration: 250ms; 
@@ -34,11 +40,31 @@
 }
 
 .button:hover {
-    background: #FF9EAA;
+    background-color: #395C38;
 }
 
 .button:active {
-    background-color: #ffbec6;
+    background-color: #79AC78;
+}
+
+[data-tooltip]::after {
+    content: attr(data-tooltip); /* Выводим текст */
+    position: absolute; /* Абсолютное позиционирование */
+    max-width: fit-content; /* Ширина подсказки */
+    left: -16px; top: 0; /* Положение подсказки */
+    background: #618264; /* Синий цвет фона */
+    color: #f4f4f4; /* Цвет текста */
+    padding: 0.5em 1.5em; /* Поля вокруг текста */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Параметры тени */
+    pointer-events: none; /* Подсказка */
+    opacity: 0; /* Подсказка невидима */
+    transition: 1s; /* Время появления подсказки */
+    border-radius: 0 100px 0 100px;
+} 
+
+[data-tooltip]:hover::after {
+    opacity: 1; /* Показываем подсказку */
+    top: 2.5em; /* Положение подсказки */
 }
 
 @media screen and (max-width: 767px) {

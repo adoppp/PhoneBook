@@ -1,15 +1,21 @@
 .item {
-    border-radius: 5px;
-    border: 0.2px solid #3A3535;
-    background: rgba(226, 226, 226, 0.432);
-    padding: 12px 8px;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    margin-bottom: 16px;
-    display: flex;
     align-items: center;
-    width: 100%;
+    margin-bottom: 16px;
+    padding: 16px;
+    border-radius: 20px;
+    background: #79AC78;
+    margin-right: 4px;
+}
+
+.container {
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.16px;
 }
 
 .item:last-child {
@@ -17,14 +23,16 @@
 }
 
 .button {
-    border: 0px;
-    max-width: 120px;
-    padding: 8px 8px;
-    border-radius: 10px;
-    background: #FF9EAA;
-    color: #F1F6F9;
+    border: 0;
+    padding: 8px 12px;
+    border-radius: 50%;
+    background: #618264;
+    color: #FFF;
+    font-family: Roboto;
     font-size: 14px;
     font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.16px;
     text-transform: uppercase;
     cursor: pointer;
     transition-property: background-color;
@@ -33,17 +41,13 @@
 }
 
 .button:hover {
-    background-color: #e1848f;
+    background-color: #395C38;
 }
 
 .button:active {
-    background-color: #ffbec6;
-}
-
-.container {
-    margin-right: 12px;
+    background-color: #79AC78;
 }
 
 .span {
-    margin-right: 8px;
+    margin-right: 12px;
 }

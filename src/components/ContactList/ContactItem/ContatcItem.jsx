@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import css from './ContactItem.module.css';
+import { ReactSVG } from 'react-svg'
 
 export const ContactItem = ({ contact, onDeleteContact }) => {
   return (
@@ -8,7 +9,9 @@ export const ContactItem = ({ contact, onDeleteContact }) => {
         <span className={css.span}>{contact.name}</span>
         <span> {contact.number}</span>
       </div>
-      <button onClick={() => onDeleteContact(contact.id)} className={css.button} >Delete</button>
+      <button onClick={() => onDeleteContact(contact.id)} className={css.button} >
+        x      
+      </button>
     </li>
   );
 };

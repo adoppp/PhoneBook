@@ -11,7 +11,6 @@ import { ContactForm } from '../../components/Form/form';
 import { ContactList } from '../../components/ContactList/ContactList';
 import { Filter } from '../../components/Filter/Filter';
 import css from './Contacts.module.css';
-import { Total } from '../../components/Total/Total';
 
 const Contacts = () => {
   const contacts = useSelector(contactsSelector);
@@ -53,24 +52,23 @@ const Contacts = () => {
   };
 
   return (
-    <section>
     <div className={css.container}>
-      <h1 className={css.title}>Phonebook</h1>
-      <ContactForm onAddContact={handleAddContact} />
-      <h2 className={css.titleh2}>Contacts</h2>
-      <Total contacts={contacts}/>
-      <Filter onFilter={handleFilter} />
-      {isLoading ? 
-      <Loader /> : 
-      <ContactList
-        contacts={contacts}
-        onDeleteContact={handleDeleteContact}
-        filter={filter}
-      />
-      }
-      {error && (<Error errorText={`Something went wrong... ${error}. Please try again.`} />)}
+      <div>
+        <ContactForm onAddContact={handleAddContact} />
+      </div>
+      <div className={css.contacts}>
+        <Filter onFilter={handleFilter} />
+        {isLoading ? 
+        <Loader /> : 
+        <ContactList
+          contacts={contacts}
+          onDeleteContact={handleDeleteContact}
+          filter={filter}
+        />
+        }
+        {error && (<Error errorText={`Something went wrong... ${error}. Please try again.`} />)}
+      </div>
     </div>
-    </section>
   )
 }
 
