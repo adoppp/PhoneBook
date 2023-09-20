@@ -16,3 +16,8 @@
     padding: 60px 80px;
     max-height: calc(100% - 120px);
 }
+
+.loader {
+    max-width: fit-content;
+    margin: 0 auto;
+}

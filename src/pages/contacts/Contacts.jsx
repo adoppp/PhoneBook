@@ -5,7 +5,7 @@ import { makeFilter } from 'redux/redusers/filterSlice';
 import { fetchContacts, addContact, deleteContact } from 'redux/operations/contactsThunk';
 import Notiflix from 'notiflix';
 
-import { Loader } from '../../components/Loader/Loader';
+import { LoaderTwo } from '../../components/Loader/LoaderTwo';
 import { Error } from '../../components/Error/Error';
 import { ContactForm } from '../../components/Form/form';
 import { ContactList } from '../../components/ContactList/ContactList';
@@ -59,7 +59,9 @@ const Contacts = () => {
       <div className={css.contacts}>
         <Filter onFilter={handleFilter} />
         {isLoading ? 
-        <Loader /> : 
+        <div className={css.loader}>
+          <LoaderTwo />
+        </div> : 
         <ContactList
           contacts={contacts}
           onDeleteContact={handleDeleteContact}
