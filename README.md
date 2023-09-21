@@ -1,3 +1,1 @@
--loader adaptive(margin-top)
--768-1440px adaptive
--scroll y
+It's a project PhoneBook with responsive layout, adaptive design, sign up/log in feauters. All contacts are private to user, u can delete one, make a new one and search contact with filter. Soon maybe I'll add a change contact logic, then u can change name/number contact wich exist in your book. Thx for using. If u  intrested in me as a React developer u can contact me just follow this link(better is contact in Linked In): https://adoppp.github.io/Links/ .
