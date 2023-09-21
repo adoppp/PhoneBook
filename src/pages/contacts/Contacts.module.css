@@ -22,7 +22,7 @@
     margin: 0 auto;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .container {
         flex-direction: column;
         margin-top: 80px;
@@ -30,5 +30,15 @@
 
     .contacts {
         padding: 60px  16px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .contacts {
+        padding: 60px 16px;
     }
 }

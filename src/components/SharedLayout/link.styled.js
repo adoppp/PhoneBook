@@ -27,7 +27,7 @@ export const Linkk = styled(NavLink)`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     font-size: 16px;
     text-align: center;
     padding: 12px 20px;
@@ -49,7 +49,7 @@ export const LinkP = styled(NavLink)`
     color: #DBDBDB;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     font-size: 24px;
   }
 `;
