@@ -1,2 +1,3 @@
 -loader adaptive(margin-top)
 -768-1440px adaptive
+-scroll y
