@@ -100,6 +100,14 @@
 
 @media screen and (max-width: 425px) {
     .form {
-        max-width: 280px;
+        padding: 60px 16px 60px 16px;
+    }
+
+    .button {
+        margin-top: 32px;
+    }
+
+    .title {
+        font-size: 24px;
     }
 }

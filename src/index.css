@@ -46,6 +46,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  background-color: #618264;
   background-image: url('./img/Background.jpg');
   background-repeat: no-repeat;
   background-size: cover;

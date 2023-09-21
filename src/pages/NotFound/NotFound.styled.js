@@ -29,4 +29,11 @@ export const Link = styled(NavLink)`
       background: #395C38;
     }
   }
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    text-align: center;
+    padding: 12px 20px;
+    font-weight: 400;
+  }
 `;

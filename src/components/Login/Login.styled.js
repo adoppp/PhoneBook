@@ -21,4 +21,10 @@ export const Link = styled(NavLink)`
     &:hover {
     background: #395C38;
     }
+
+    @media (max-width: 768px) {
+        font-size: 20px;
+        text-align: center;
+        padding: 12px 20px;
+    }
 `;

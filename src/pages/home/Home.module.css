@@ -58,3 +58,21 @@
 .link:active {
     background-color: #79AC78;
 }
+
+@media screen and (max-width: 768px) {
+    .paddingContainer {
+        padding: 0 16px;
+    }  
+
+    .title {
+        font-size: 16px;
+    }
+
+    .text {
+        font-size: 14px;
+    }
+
+    .container {
+        margin-top: 80px;
+    }
+}

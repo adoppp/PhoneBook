@@ -14,9 +14,9 @@ export const UserMenu = () => {
 
     return (
         <div className={css.container}>
+            <p className={css.pTwo} data-tooltip={email} >Hello, {user.name}</p>
             <p className={css.p} data-tooltip={email}>Hello, {user.name}</p>
             <button onClick={handleLogOut} className={css.button}>Log out</button>
-            <p className={css.pTwo} data-tooltip={email} >Hello, {user.name}</p>
         </div>
     )
 }

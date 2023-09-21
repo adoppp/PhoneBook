@@ -9,7 +9,7 @@ export const Linkk = styled(NavLink)`
   font-size: 24px;
   font-weight: 500;
   line-height: normal;
-  padding: 12px 20px;
+  padding: 12px 40px;
 
   transition-property: background-color;
   transition-duration: 250ms; 
@@ -30,6 +30,7 @@ export const Linkk = styled(NavLink)`
   @media (max-width: 768px) {
     font-size: 16px;
     text-align: center;
+    padding: 12px 20px;
   }
 `;
 
