@@ -55,11 +55,14 @@ export const logoutThunk = createAsyncThunk(
 export const refreshUserThunk = createAsyncThunk(
     "auth/refresh",
     async (_, thunkAPI) => {
+        const state = thunkAPI.getState();
+        const userToken = state.user.token;
+
         try {
-            const state = thunkAPI.getState();
-            const userToken = state.user.token;
             
             token.set(userToken)
+
+            if (!token) throw new Error();
 
             const response = await instance.get("/users/current")
             return response.data;
@@ -67,12 +70,12 @@ export const refreshUserThunk = createAsyncThunk(
             return thunkAPI.rejectWithValue(e.message);
         }
     },
-    {
-    condition: (_, { getState }) => {
-        const state = getState();
-        const userToken = state.user.token;
+    // {
+    // condition: (_, { getState }) => {
+    //     const state = getState();
+    //     const userToken = state.user.token;
 
-        if (!userToken) return false;
-    }
-    },
+    //     if (!userToken) return false;
+    // }
+    // },
 )
