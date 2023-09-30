@@ -15,7 +15,7 @@ export const token = {
 }
 
 export const regisrtrationThunk = createAsyncThunk(
-    "auth/regisrtration",
+    "auth/registration",
     async (userData, thunkAPI) => {
         try {
             const response = await instance.post("/users/signup", userData);
